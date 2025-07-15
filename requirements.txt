@@ -5,3 +5,4 @@ requests
 PyMuPDF
 transformers
 torch
+sentence-transformers
