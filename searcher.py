@@ -9,6 +9,6 @@ def search_career_match(query_embedding, k=1):
     with open("career_roadmaps_full.json", "r") as f:
         roadmap_data = json.load(f)
 
-    D, I = index.search(np.array([query_embedding]), k=k)
+    D, I = index.search(query_embedding, k=k)
     results = [roadmap_data[i] for i in I[0]]
     return results[0]  # top match
